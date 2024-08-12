@@ -1,0 +1,112 @@
+[
+    {
+        "model": "home.medicamento",
+        "pk": 1,
+        "fields": {
+            "nome": "Paracetamol",
+            "especificacoes": "500mg",
+            "recomendacoes": "Tomar uma vez ao dia",
+            "tipo": "Analgésico",
+            "horario": "08:00"
+        }
+    },
+    {
+        "model": "home.medicamento",
+        "pk": 2,
+        "fields": {
+            "nome": "Ibuprofeno",
+            "especificacoes": "400mg",
+            "recomendacoes": "Tomar duas vezes ao dia",
+            "tipo": "Anti-inflamatório",
+            "horario": "08:00, 20:00"
+        }
+    },
+    {
+        "model": "home.medicamento",
+        "pk": 3,
+        "fields": {
+            "nome": "Amoxicilina",
+            "especificacoes": "500mg",
+            "recomendacoes": "Tomar três vezes ao dia",
+            "tipo": "Antibiótico",
+            "horario": "08:00, 14:00, 20:00"
+        }
+    },
+    {
+        "model": "home.medicamento",
+        "pk": 4,
+        "fields": {
+            "nome": "Azitromicina",
+            "especificacoes": "500mg",
+            "recomendacoes": "Tomar uma vez ao dia por três dias",
+            "tipo": "Antibiótico",
+            "horario": "08:00"
+        }
+    },
+    {
+        "model": "home.medicamento",
+        "pk": 5,
+        "fields": {
+            "nome": "Loratadina",
+            "especificacoes": "10mg",
+            "recomendacoes": "Tomar uma vez ao dia",
+            "tipo": "Anti-histamínico",
+            "horario": "08:00"
+        }
+    },
+    {
+        "model": "home.medicamento",
+        "pk": 6,
+        "fields": {
+            "nome": "Cloroquina",
+            "especificacoes": "250mg",
+            "recomendacoes": "Tomar uma vez ao dia",
+            "tipo": "Antimalárico",
+            "horario": "08:00"
+        }
+    },
+    {
+        "model": "home.medicamento",
+        "pk": 7,
+        "fields": {
+            "nome": "Metformina",
+            "especificacoes": "850mg",
+            "recomendacoes": "Tomar duas vezes ao dia",
+            "tipo": "Antidiabético",
+            "horario": "08:00, 20:00"
+        }
+    },
+    {
+        "model": "home.medicamento",
+        "pk": 8,
+        "fields": {
+            "nome": "Simvastatina",
+            "especificacoes": "20mg",
+            "recomendacoes": "Tomar uma vez ao dia à noite",
+            "tipo": "Hipolipemiante",
+            "horario": "20:00"
+        }
+    },
+    {
+        "model": "home.medicamento",
+        "pk": 9,
+        "fields": {
+            "nome": "Omeprazol",
+            "especificacoes": "20mg",
+            "recomendacoes": "Tomar uma vez ao dia antes do café da manhã",
+            "tipo": "Antiácido",
+            "horario": "08:00"
+        }
+    },
+    {
+        "model": "home.medicamento",
+        "pk": 10,
+        "fields": {
+            "nome": "Atenolol",
+            "especificacoes": "50mg",
+            "recomendacoes": "Tomar uma vez ao dia",
+            "tipo": "Antihipertensivo",
+            "horario": "08:00"
+        }
+    }
+]

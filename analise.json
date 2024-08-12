@@ -1,0 +1,191 @@
+[
+    {
+    "model": "home.analise",
+    "pk": 1,
+    
+    "fields":{
+    "nome": "Amniocentese",
+    "Area_corporal_amostra": "Líquido da membrana que reveste o feto",
+    "Descricao": "Análise do líquido, removida por uma agulha introduzida através da parede abdominal para detectar uma anomalia no feto"
+    }
+    }
+    ,
+    {
+        "model": "home.analise",
+        "pk": 2,
+        
+        "fields":{
+        "nome": "Arteriografia (angiografia)",
+        "Area_corporal_amostra": "Qualquer artéria do corpo, geralmente no cérebro, coração, rins, aorta ou pernas",
+        "Descricao": "Estudo por raios-X usando um contraste radiopaco injetado através de um tubo fino (cateter), que é conduzido até a artéria a ser estudada, de modo a detectar e delinear ou destacar um bloqueio ou defeito na artéria"        }
+        
+    },
+
+    
+    {
+            "model": "home.analise",
+            "pk": 3,
+            
+            "fields":{
+            "nome": "Audiometria",
+            "Area_corporal_amostra": "Ouvidos",
+            "Descricao": "Avaliação da capacidade de ouvir e distinguir sons em frequências e volumes específicos usando fones de ouvido"
+    }
+    }
+    ,
+    
+
+    {
+        "model": "home.analise",
+        "pk": 4,
+        
+        "fields":{
+        "nome": "Auscultação",
+        "Area_corporal_amostra": "Coração",
+        "Descricao": "Auscultar com um estetoscópio para verificar a existência de sons cardíacos anormais"
+
+        }
+    }
+,
+
+{
+    "model": "home.analise",
+    "pk": 5,
+    
+    "fields":{
+    "nome": "Estudos com radiografia de bário",
+    "Area_corporal_amostra": "Esôfago, estômago, intestino ou reto",
+    "Descricao": "Estudo com raios-X para detectar ulcerações, tumores ou outras anomalias"
+
+    }
+}
+,
+    
+{
+    "model": "home.analise",
+    "pk": 6,
+    
+    "fields":{
+        "nome": "Biopsia",
+        "Area_corporal_amostra": "Qualquer tecido do corpo",
+        "Descricao": "Remoção e exame de uma amostra de tecido sob o microscópio para verificar a presença de câncer ou outra anomalia"
+
+    }
+}
+,
+
+{
+    "model": "home.analise",
+    "pk": 7,
+    
+    "fields":{
+        "nome": "Medição de pressão arterial",  
+        "Area_corporal_amostra": "Geralmente em um braço",
+        "Descricao": "Análise quanto a pressão arterial baixa ou alta, geralmente usando uma coifa inflável colocada em volta do braço"
+
+
+    }
+}
+,
+
+{
+    "model": "home.analise",
+    "pk": 8,
+    
+    "fields":{
+        "nome": "Exames de sangue",
+ 
+        "Area_corporal_amostra": "Geralmente uma amostra sanguínea retirada de um braço",
+        "Descricao": "Medição de substâncias no sangue para avaliar a função dos órgãos e ajudar a diagnosticar e monitorar vários distúrbios"
+
+
+    }
+}
+,
+{
+    "model": "home.analise",
+    "pk": 9,
+    
+    "fields":{
+        "nome": "Aspiração da medula óssea", 
+        "Area_corporal_amostra": "Osso do quadril ou esterno",
+        "Descricao": "Remoção de uma amostra da medula óssea por meio de uma agulha para exame sob o microscópio, de modo a verificar a existência de anomalias nas células sanguíneas"
+
+
+    }
+}
+,
+
+{
+    "model": "home.analise",
+    "pk": 10,
+    
+    "fields":{
+        "nome": "Broncoscopia",
+        "Area_corporal_amostra": "Vias respiratórias dos pulmões",
+        "Descricao": "Exame direto com um tubo de visualização para verificar a existência de tumores ou outras anomalias"
+
+
+    }
+}
+,
+{
+    "model": "home.analise",
+    "pk": 11,
+    
+    "fields":{
+        "nome": "Cateterismo cardíaco",
+        "Area_corporal_amostra": "Coração",
+        "Descricao": "Estudo da função e estrutura cardíacas usando um cateter introduzido em um vaso sanguíneo e conduzido até o coração"
+
+
+    }
+}
+,
+
+{
+    "model": "home.analise",
+    "pk": 12,
+    
+    "fields":{
+        "nome": "Amostras de vilosidades coriônicas",
+        "Area_corporal_amostra": "Placenta",
+        "Descricao": "Remoção de uma amostra para exame sob o microscópio para verificar a existência de anomalias no feto"
+
+
+    }
+}
+,
+{
+    "model": "home.analise",
+    "pk": 13,
+    
+    "fields":{
+        "nome": "Analise cromossômica",
+        "Area_corporal_amostra": "Sangue",
+        "Descricao": "Exame sob o microscópio para detectar um distúrbio genético ou para determinar o sexo do feto"
+
+
+    }
+}
+,    
+
+    
+    
+{
+    "model": "home.analise",
+    "pk": 14,
+    
+    "fields":{
+        "nome": "Colonoscopia",
+        "Area_corporal_amostra": "Intestino grosso",
+        "Descricao": "Exame direto com um tubo"
+
+
+    }
+}
+  
+    
+    
+    
+]

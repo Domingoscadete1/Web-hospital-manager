@@ -1,0 +1,21 @@
+Receita: {{ receita.titulo }}
+
+Paciente: {{ receita.paciente }}
+Médico: {{ receita.medico }}
+
+Medicamentos:
+{% for medicamento in Medicamento %}
+    
+    {% if medicamento.receita.id == receita.id %}
+    Médico: {{ medicamento.receita.medico_id.nome }}
+    Paciente: {{ medicamento.receita.paciente_id.nome }}
+    
+   
+    
+        {{ medicamento.medicamento.nome }} - {{ medicamento.dosagem }}
+
+    
+    {% else %}
+    {% endif %}
+      
+    {% endfor %}

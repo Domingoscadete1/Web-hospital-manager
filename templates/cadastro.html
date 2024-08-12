@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'IG.icon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Cadastro</title>
+</head>
+<body>
+    
+    <div id="page" class="site">
+        <div class="container">
+            <div class="wrapper">
+                <div class="signup">
+                    <div class="content-heading">
+                        <div class="y-style">
+                            <div class="logo"><a href="{% url 'home' %}">D<span>W</span>D</a></div>
+                            <div class="welcome">
+                                <h2>O Cento Médico Kipungo<br> dá-lhe boas vindas!! </h2><br>
+                                <p>Cuidando da sua saude.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-form">
+                        <div class="y-style">
+                            <form action="{%url 'cadastro' %}" method="POST">{% csrf_token %}
+                                <p>
+                                    <label>Nome Completo</label>
+                                    <input type="text" placeholder="digite o nome..." name="username" required>
+                                </p>
+                                <p>
+                                    <label>Email</label>
+                                    <input type="email" placeholder="digite o email..." name="email" required>
+                                </p>
+                                <p>
+                                    <label>Senha</label>
+                                    <input type="password" placeholder="digite a senha..." name="senha" required>
+                                </p>
+                                <p class="checkbox" required>
+                                    <label for="terms">Medico</label>
+                                    <input type="checkbox" id="terms" name="is_medico" ><br>
+                                    <label for="terms">Paciente</label>
+                                    <input type="checkbox" id="terms" name="is_paciente"><br>
+                                    <label for="terms">Atendente</label>
+                                    <input type="checkbox" id="terms" name="is_atendente">
+                                    
+                                </p>
+                                <p class="forgot"><a href="{% url 'login' %}">Fazer Login</a></p>
+
+                                <p><button type="submit">Cadastrar</button></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

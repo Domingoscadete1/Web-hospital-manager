@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'IG.icon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Login</title>
+</head>
+<body>
+    
+    
+    <div id="page" class="site">
+        <div class="container">
+            <div class="wrapper">
+                <div class="login">
+                    <div class="content-heading">
+                        <div class="y-style">
+                            <div class="logo"><a href="{% url 'home' %}">D<span>W</span>D</a></div>
+                            <div class="welcome">
+                                <h2>O Centro Médico Kipungo<br> dá-lhe boas vindas!! </h2><br>
+                                <p>Cuidando da sua saude.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-form">
+                        <div class="y-style">
+                            <form action="{%url 'login' %}" method="POST">
+                                {% csrf_token %}
+                                <p>
+                                    <label>Nome</label>
+                                    <input type="text" placeholder="digite seu nome..." name="username" requerid>
+                                </p>
+                                <p>
+                                    <label>Senha</label>
+                                    <input type="password" placeholder="digite sua senha..." name="senha" rerequerid>
+                                </p>
+                                
+                                <p class="forgot"><a href="{% url 'cadastro' %}">Cadastrar-se</a></p>
+                                <p><button type="submit">Login</button></p>
+                                <p class="forgot"><a href="{% url 'password_reset' %}">Esqueceu a sua senha??</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

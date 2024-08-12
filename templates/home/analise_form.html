@@ -1,0 +1,103 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+   <title>Responsive Regisration Form </title>
+</head>
+<body>
+    <div class="container">
+        <a onclick="window.history.back()" class="logout-btn">
+            <span class="material-icons-sharp">west</span>
+        </a>
+        <header>Receita Form</header>
+        
+
+        
+           <!-- form_receita.html -->
+<form method="post" id="receitaForm" action="">
+    {% csrf_token %}
+    {{ receita_form.as_p }}
+
+    <label for="medicamentoSearch">Buscar Analises:</label>
+    <input type="text" id="medicamentoSearch" name="medicamentoSearch" autocomplete="off">
+    <div id="medicamentoResults"></div>
+
+    <div id="medicamentosContainer">
+        
+        <div class="medicamento-item" style="display: none;">
+            <input type="hidden" name="analises" class="medicamento-id">
+            <span class="medicamento-nome"></span>
+            
+            <button type="button" class="remove-medicamento">Remover</button>
+        </div>
+    </div>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    // Buscar medicamentos
+    $('#medicamentoSearch').on('input', function() {
+        var query = $(this).val();
+        if (query.length > 2) {
+            $.ajax({
+                url: "{% url 'buscar-analise' %}",
+                data: { 'q': query },
+                success: function(data) {
+                    $('#medicamentoResults').empty();
+                    if (data.length > 0) {
+                        data.forEach(function(medicamento) {
+                            $('#medicamentoResults').append('<div class="medicamento-result-item" data-id="'+ medicamento.id +'" data-nome="'+ medicamento.nome +'">'+ medicamento.nome +'</div>');
+                        });
+                    } else {
+                        $('#medicamentoResults').append('<div>Nenhum resultado encontrado</div>');
+                    }
+                }
+            });
+        } else {
+            $('#medicamentoResults').empty();
+        }
+    });
+
+    // Selecionar medicamento
+    $(document).on('click', '.medicamento-result-item', function() {
+        var medicamentoId = $(this).data('id');
+        var medicamentoNome = $(this).data('nome');
+        $('#medicamentoSearch').val('');
+        $('#medicamentoResults').empty();
+
+        var newMedicamento = $('.medicamento-item').first().clone();
+        newMedicamento.find('.medicamento-id').val(medicamentoId);
+        newMedicamento.find('.medicamento-nome').text(medicamentoNome);
+        
+        newMedicamento.appendTo('#medicamentosContainer');
+        newMedicamento.show();
+    });
+
+    // Remover medicamento
+    $(document).on('click', '.remove-medicamento', function() {
+        $(this).closest('.medicamento-item').remove();
+    });
+});
+</script>
+
+    </div>
+
+    <script src="{% static 'js/script1.js' %}"></script>
+</body>
+</html>

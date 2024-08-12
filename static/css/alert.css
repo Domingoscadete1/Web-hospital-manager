@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    margin: 0;
+}
+
+.notification-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    padding: 20px;
+}
+
+.notification-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00c851;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.notification-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.notification-content {
+    text-align: center;
+}
+
+.notification-content h3 {
+    color: #00c851;
+    margin: 0 0 10px 0;
+}
+
+.notification-content p {
+    color: #555;
+    margin: 0 0 20px 0;
+}
+
+.notification-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.view-button {
+    background-color: #00c851;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.dismiss-button {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.view-button:hover {
+    background-color: #00b447;
+}
+
+.dismiss-button:hover {
+    background-color: #ccc;
+}
